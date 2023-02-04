@@ -5,7 +5,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document("author")
 public class Author {
-    
+
     @Id
     String id;
 
@@ -13,15 +13,15 @@ public class Author {
     private String firstName;
     private String lastName;
     private String email;
-    private AccountType accountType;
+    private String accountTypeId;
 
-    public Author(String username, String firstName, String lastName,String email, AccountType accountType) {
+    public Author(String username, String firstName, String lastName, String email, String accountTypeId) {
         this.username = username;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.accountType = accountType;
-  }
+        this.accountTypeId = accountTypeId;
+    }
 
     public String getId() {
         return this.id;
@@ -63,12 +63,12 @@ public class Author {
         this.email = email;
     }
 
-    public AccountType getAccountType() {
-        return this.accountType;
+    public String getAccountTypeId() {
+        return this.accountTypeId;
     }
 
-    public void setAccountType(AccountType accountType) {
-        this.accountType = accountType;
+    public void setAccountTypeId(String accountTypeId) {
+        this.accountTypeId = accountTypeId;
     }
 
 }
