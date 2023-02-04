@@ -5,12 +5,11 @@ import java.util.Optional;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-import com.wellfed.wellfed.models.Author;
 import com.wellfed.wellfed.models.Recipe;
 
 public interface RecipeRepository extends MongoRepository<Recipe, String> {
     
-    List<Recipe> findByAuthor(Author author);
+    List<Recipe> findByAuthorId(String authorId);
 
     List<Recipe> findByName(String name);
 

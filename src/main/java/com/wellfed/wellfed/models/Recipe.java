@@ -12,7 +12,7 @@ public class Recipe {
     String id;
 
     private String name;
-    private Author author;
+    private String authorId;
     private Integer time;
     private Complexity complexity;
     private String description;
@@ -25,9 +25,9 @@ public class Recipe {
 
 
 
-    public Recipe(String name, Author author, Integer time, Complexity complexity, String description, List<String> ingredients, List<String> steps, List<Tag> tags, Integer serves, String pictureId) {
+    public Recipe(String name, String authorId, Integer time, Complexity complexity, String description, List<String> ingredients, List<String> steps, List<Tag> tags, Integer serves, String pictureId) {
         this.name = name;
-        this.author = author;
+        this.authorId = authorId;
         this.time = time;
         this.complexity = complexity;
         this.ingredients = ingredients;
@@ -53,12 +53,12 @@ public class Recipe {
         this.name = name;
     }
 
-    public Author getAuthor() {
-        return this.author;
+    public String getAuthorId() {
+        return this.authorId;
     }
 
-    public void setAuthor(Author author) {
-        this.author = author;
+    public void setAuthor(String authorId) {
+        this.authorId = authorId;
     }
 
     public Integer getTime() {
