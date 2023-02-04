@@ -14,29 +14,31 @@ public class Recipe {
     private String name;
     private String authorId;
     private Integer time;
-    private Complexity complexity;
+    private String complexityId;
     private String description;
+    private List<String> tools;
     private List<String> ingredients;
     private List<String> steps;
     private List<Tag> tags;
     private Integer serves;
     private String pictureId;
 
-
-
-
-    public Recipe(String name, String authorId, Integer time, Complexity complexity, String description, List<String> ingredients, List<String> steps, List<Tag> tags, Integer serves, String pictureId) {
+    public Recipe(String name, String authorId, Integer time, String complexityId, String description,
+            List<String> tools,
+            List<String> ingredients, List<String> steps, List<Tag> tags, Integer serves, String pictureId) {
         this.name = name;
         this.authorId = authorId;
         this.time = time;
-        this.complexity = complexity;
+        this.complexityId = complexityId;
+        this.description = description;
+        this.tools = tools;
         this.ingredients = ingredients;
         this.steps = steps;
         this.tags = tags;
         this.serves = serves;
         this.pictureId = pictureId;
     }
-    
+
     public String getId() {
         return this.id;
     }
@@ -57,7 +59,7 @@ public class Recipe {
         return this.authorId;
     }
 
-    public void setAuthor(String authorId) {
+    public void setAuthorId(String authorId) {
         this.authorId = authorId;
     }
 
@@ -69,15 +71,14 @@ public class Recipe {
         this.time = time;
     }
 
-    public Complexity getComplexity() {
-        return this.complexity;
+    public String getComplexityId() {
+        return this.complexityId;
     }
 
-    public void setComplexity(Complexity complexity) {
-        this.complexity = complexity;
+    public void setComplexityId(String complexityId) {
+        this.complexityId = complexityId;
     }
 
-    
     public String getDescription() {
         return this.description;
     }
@@ -125,5 +126,13 @@ public class Recipe {
     public void setPictureId(String pictureId) {
         this.pictureId = pictureId;
     }
-    
+
+    public List<String> getTools() {
+        return this.tools;
+    }
+
+    public void setTools(List<String> tools) {
+        this.tools = tools;
+    }
+
 }
