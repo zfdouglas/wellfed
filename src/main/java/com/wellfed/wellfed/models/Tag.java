@@ -6,15 +6,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document("tag")
 public class Tag {
     @Id
-    String name;
+    String id;
     String displayName;
 
-    public String getName() {
-        return this.name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public Tag(String displayName) {
+        this.displayName = displayName;
     }
 
     public String getDisplayName() {
@@ -23,5 +19,9 @@ public class Tag {
 
     public void setDisplayName(String displayName) {
         this.displayName = displayName;
+    }
+
+    public String getId() {
+        return this.id;
     }
 }

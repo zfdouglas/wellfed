@@ -19,13 +19,13 @@ public class Recipe {
     private List<String> tools;
     private List<String> ingredients;
     private List<String> steps;
-    private List<Tag> tags;
+    private List<String> tags;
     private Integer serves;
     private String pictureId;
 
     public Recipe(String name, String authorId, Integer time, String complexityId, String description,
             List<String> tools,
-            List<String> ingredients, List<String> steps, List<Tag> tags, Integer serves, String pictureId) {
+            List<String> ingredients, List<String> steps, List<String> tags, Integer serves, String pictureId) {
         this.name = name;
         this.authorId = authorId;
         this.time = time;
@@ -103,11 +103,11 @@ public class Recipe {
         this.steps = steps;
     }
 
-    public List<Tag> getTags() {
+    public List<String> getTags() {
         return tags;
     }
 
-    public void setTags(List<Tag> tags) {
+    public void setTags(List<String> tags) {
         this.tags = tags;
     }
 
